@@ -5,9 +5,6 @@ import requests
 import os
 import uuid
 
-# -------------------------------------------------
-# Load environment variables
-# -------------------------------------------------
 load_dotenv()
 
 HF_TOKEN = os.getenv("HF_TOKEN")
