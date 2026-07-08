@@ -53,8 +53,7 @@ with app.app_context():
     db.create_all()
 
 # -------------------------------------------------
-# Temporary Session ID
-# Replace this with login/user sessions later
+# Session ID
 # -------------------------------------------------
 SESSION_ID = "96e936b6-f4a2-49c8-9e0e-50620c79012e"
 
