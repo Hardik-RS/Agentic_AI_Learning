@@ -54,7 +54,6 @@ with app.app_context():
 
 # -------------------------------------------------
 # Temporary Session ID
-# Replace this with login/user sessions later
 # -------------------------------------------------
 SESSION_ID = "96e936b6-f4a2-49c8-9e0e-50620c79012e"
 
