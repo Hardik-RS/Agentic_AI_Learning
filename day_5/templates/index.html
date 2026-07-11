@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask LLM Chat</title>
+</head>
+<body>
+
+    <h2>Simple Flask Chatbot</h2>
+
+    <input type="text" id="message" placeholder="Ask something">
+    <button onclick="sendMessage()">Send</button>
+
+    <p><strong>Response:</strong></p>
+    <div id="response"></div>
+
+    <script>
+        async function sendMessage() {
+
+            const message = document.getElementById("message").value;
+
+            const res = await fetch("/chat", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    message: message
+                })
+            });
+
+            const data = await res.json();
+
+            document.getElementById("response").innerText = data.response;
+        }
+    </script>
+
+</body>
+</html>
